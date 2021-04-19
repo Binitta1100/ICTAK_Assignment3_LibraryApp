@@ -1,0 +1,15 @@
+<div style="background-color: #1a508b;">
+    <nav class="navbar">
+        <h3 class="name"><strong>{{title}}</strong></h3>
+        <ul class="nav-list">
+            <li><a routerLink="/addbook" *ngIf="_auth.loggedIn() && _auth.rolesVerify()">Add Book</a></li>
+            <li><a routerLink="/addauthor" *ngIf="_auth.loggedIn() && _auth.rolesVerify()">Add Author</a></li>
+            <li><a routerLink="/books" *ngIf="_auth.loggedIn()">Books</a></li>
+            <li><a routerLink="/authors" *ngIf="_auth.loggedIn()">Authors</a></li>
+            <li><a (click)="logoutUser()" *ngIf="_auth.loggedIn()">Logout</a></li>
+            <li><a routerLink="/" *ngIf="!_auth.loggedIn()">Home</a></li>
+            <li><a routerLink="/signup" *ngIf="!_auth.loggedIn()">Sign Up</a></li>
+            <li><a routerLink="/login" *ngIf="!_auth.loggedIn()">Login</a></li>
+        </ul>
+    </nav>
+</div>

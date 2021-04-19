@@ -1,0 +1,45 @@
+<div class="container">
+    <div>
+      <h3 style="color: #1687a7; margin-top: 1%; margin-bottom: 2%; text-align: center;">{{title}}
+        <p class="lead"></p>
+      </h3>
+    </div>
+    <form (ngSubmit)="AddAuthor()">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" style="margin-left: 25%;">
+            <div class="panel">
+              <div class="panel-body" style="background-color: #d3e0ea; border-radius: 20px;">
+                <div class='table-responsive'>
+                  <table class='table' style="margin-top: 15px;">       
+                    <tbody> 
+                      <tr>
+                        <td><label>Author Name</label></td>
+                        <td><input type="text" style="width: 250px;" name="aname" [(ngModel)]="authorItem.aname" required/></td>                  
+                      </tr>
+                      <tr>
+                        <td><label>Nationality</label></td>
+                        <td><input type="text" style="width: 250px;" name="nationality" [(ngModel)]="authorItem.nationality" required/></td>               
+                      </tr> 
+                      <tr>
+                        <td><label>Famous Book</label></td>
+                        <td><input type="text" style="width: 250px;" name="fambook" [(ngModel)]="authorItem.fambook" required/></td>                  
+                      </tr> 
+                      <tr>
+                        <td><label>Image Url</label></td>
+                        <td><input type="text" style="width: 250px;" name="img" [(ngModel)]="authorItem.img" required/></td>                  
+                      </tr>  
+                      <tr>
+                        <td></td>
+                        <td><button type="submit" class="btn btn-info">Submit</button></td>                  
+                      </tr>             
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
